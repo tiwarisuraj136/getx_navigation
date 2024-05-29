@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:getx_navigation/screens/fourth.dart';
 import 'package:getx_navigation/screens/home.dart';
 import 'package:getx_navigation/screens/second.dart';
+import 'package:getx_navigation/screens/splashscreen.dart';
 import 'package:getx_navigation/screens/third.dart';
 
 void main() {
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       getPages: [
-        GetPage(name: '/', page: () => const Home()),
+        GetPage(name: '/', page: () => const Splashscreen()),
+        GetPage(name: '/', page: () =>  Home()),
         GetPage(name: '/second', page: () => const Second()),
         GetPage(
             name: '/third', page: () => const Third(), transition: Transition.zoom),

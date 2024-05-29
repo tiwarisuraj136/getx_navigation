@@ -17,7 +17,7 @@ class Third extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-              onPressed: () => Get.offAll(const Home()),
+              onPressed: () => Get.offAll( Home()),
               child: const Text("Go To Home"),
             )
           ],
