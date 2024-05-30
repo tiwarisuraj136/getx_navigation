@@ -8,7 +8,6 @@ class Home extends StatelessWidget {
    Home({super.key});
 
   var scaffoldKey = GlobalKey<ScaffoldState>();
-   PersistentTabController controller = PersistentTabController(initialIndex: 0);
 
   void openDrawer() {
     scaffoldKey.currentState!.openDrawer();
@@ -79,6 +78,11 @@ class Home extends StatelessWidget {
             )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        backgroundColor: Colors.teal,
+        child: const Icon(Icons.add,),
       ),
     );
   }

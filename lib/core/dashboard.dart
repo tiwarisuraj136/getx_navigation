@@ -17,62 +17,39 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
-    return PopScope(
-      canPop: true,
-      child:PersistentTabView(
-        context,
-        navBarHeight: 65,
-         controller: PersistentTabController(),
-        screens: _buildScreens(),
-        items: _navBarsItems(),
-
-        confineInSafeArea: true,
-        stateManagement: false,
-        decoration: NavBarDecoration(
-            borderRadius: BorderRadius.circular(5.0),
-            boxShadow: [
-              const BoxShadow(
-                color: Colors.lightBlue,
-                offset: Offset(
-                  0.0,
-                  -5.0,
-                ),
-                blurRadius: 10.0,
-                spreadRadius: -5.0,
-              ), //
-            ]),
-        popAllScreensOnTapOfSelectedTab: false,
-        popActionScreens: PopActionScreensType.all,
-        navBarStyle: NavBarStyle.style15,
-        itemAnimationProperties: const ItemAnimationProperties(
-          duration: Duration(milliseconds: 100),
-          curve: Curves.easeOut,
-        ),
-        screenTransitionAnimation: const ScreenTransitionAnimation(
-          // curve: Curves.easeOutBack,
-          duration: Duration(milliseconds: 5000),
-        ),
-        onItemSelected: (value) async {
-        /*  globals.animatedIcon.value = value;
-          if (value.toString() == '0') {
-            await controller.syncLocalData();
-          } else if (value.toString() == '3') {
-            if (appPrefs.hrmProfileType == 0 || appPrefs.hrmProfileType == 9) {
-              controller.callLogsController();
-            }else{
-              controller.callReportController();
-            }
-
-
-          } else if (value.toString() == '4') {
-            controller.callSettingController();
-          } else if (value.toString() == '1') {
-            controller.getApprovalCountInfo();
-          } else if (value.toString() == '2') {
-            controller.callAddonController();
-          }*/
-        },
+    return PersistentTabView(
+      context,
+      navBarHeight: 65,
+       controller: PersistentTabController(),
+      screens: _buildScreens(),
+      items: _navBarsItems(),
+      confineInSafeArea: true,
+      stateManagement: false,
+      decoration: NavBarDecoration(
+          borderRadius: BorderRadius.circular(5.0),
+          boxShadow: [
+            const BoxShadow(
+              color: Colors.lightBlue,
+              offset: Offset(
+                0.0,
+                -5.0,
+              ),
+              blurRadius: 10.0,
+              spreadRadius: -5.0,
+            ), //
+          ]),
+      popAllScreensOnTapOfSelectedTab: false,
+      popActionScreens: PopActionScreensType.all,
+      navBarStyle: NavBarStyle.style15,
+      itemAnimationProperties: const ItemAnimationProperties(
+        duration: Duration(milliseconds: 100),
+        curve: Curves.easeOut,
       ),
+      screenTransitionAnimation: const ScreenTransitionAnimation(
+        duration: Duration(milliseconds: 5000),
+      ),
+      onItemSelected: (value) async {
+      },
     );
   }
 
@@ -105,11 +82,7 @@ class _DashboardState extends State<Dashboard> {
           padding: const EdgeInsets.all(12.0),
           child:
           GestureDetector(
-              onTap: () {
-                // globals.animatedIcon.value = 0;
-                // controller.controller.index = 0;
-                // globals.animatedIcon.refresh();
-              },
+              onTap: () {},
               child: const Icon(Icons.cabin, color: Colors.white,) ),
         ),
         activeColorPrimary: Colors.transparent,
